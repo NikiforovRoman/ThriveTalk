@@ -64,6 +64,11 @@ html {
     transition: 0.4s;
 }
 
+.page-main {
+    margin: 0;
+    padding: 0;
+}
+
 .basic-link:hover {
     background-color: var(--basic-link-color);
     color: white;
@@ -71,13 +76,18 @@ html {
 
 .page-header {
     background-color: var(--header-background-color);
+    margin: 0;
+    padding: 0;
 }
 
 .main-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
     display: flex;
     flex-wrap: wrap;
-    max-width: 1120px;
-    padding: 0 10px;
+    max-width: 1130px;
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
@@ -128,6 +138,12 @@ html {
     background-color: #00CED1;
 }
 
+@media (max-width: 1190px) {
+    .main-nav {
+        padding: 27px 10px 164px 10px;
+    }
+}
+
 @media (max-width: 540px) {
     .main-nav {
         flex-direction: column;
@@ -148,18 +164,44 @@ html {
 }
 
 .intro {
+    margin: 0;
+    margin-right: 320px;
+    padding: 230px 0 179px 75px;
     background-color: var(--header-background-color);
 }
 
 .intro__wrapper {
-    max-width: 1120px;
+    max-width: 880px;
     margin: 0 auto;
-    padding: 0 10px;
-    padding-bottom: 65px;
+}
+
+.intro__ellipse {
+    position: absolute;
+    right: 0;
+    top: -25px;
+    width: 743px;
+    height: 724px;
+    background-image: url("../img/ellipse.svg");
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.intro__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 743px;
+    height: 824px;
+    background-image: url("../img/intro.png");
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .intro__title {
     margin-bottom: 34px;
+    letter-spacing: 1px;
 }
 
 .intro__subtitle {
@@ -188,8 +230,27 @@ html {
     margin-bottom: 10px;
 }
 
+@media (max-width: 1190px) {
+    .intro {
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .intro__wrapper {
+        max-width: 1120px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0 auto;
+    }
+    .intro__ellipse,
+    .intro__img {
+        display: none;
+    }
+}
+
 @media (max-width: 540px) {
     .intro {
+        padding-top: 260px;
         display: flex;
         flex-direction: column;
         align-items: center;

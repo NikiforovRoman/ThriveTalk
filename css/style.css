@@ -622,6 +622,12 @@ html {
     margin-top: 152px;
 }
 
+@media (max-width: 1255px) {
+    .extras__link {
+        margin-top: 80px;
+    }
+}
+
 @media (max-width: 1200px) {
     .extras {
         height: auto;
